@@ -1,10 +1,9 @@
 class Solution {
-    fun solution(numbers: IntArray): Int {
-        var answer: Int = -1
+    fun solution(n: Int): Int {
+        var answer: Int = n
 
-        for(x in 1..9){
-            if(numbers.contains(x)) continue
-            else answer += x
+        for( x in 1..n) {
+            if( n%x == 1 && answer > x ) answer = x
         }
 
         return answer
